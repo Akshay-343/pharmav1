@@ -124,7 +124,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 STATICFILES_DIRS = [STATIC_DIR, MEDIA_ROOT]
-STATIC_ROOT = Path(BASE_DIR / 'static')
+STATIC_ROOT = Path(BASE_DIR) / 'static'
 LOGIN_REDIRECT_URL = '/afterlogin'
 
 # for contact us give your gmail id and password
