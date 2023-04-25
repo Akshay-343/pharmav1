@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
+from pathlib import Path
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
@@ -124,7 +124,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 STATICFILES_DIRS = [STATIC_DIR, MEDIA_ROOT]
-
+STATIC_ROOT = Path(BASE_DIR / 'static')
 LOGIN_REDIRECT_URL = '/afterlogin'
 
 # for contact us give your gmail id and password
